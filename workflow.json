@@ -1,0 +1,164 @@
+{
+  "id": "published-wf-template-tpl-0011-0",
+  "name": "Anti-Money Laundering Investigation",
+  "description": "Comprehensive AML investigation workflow that analyzes transaction patterns, performs entity resolution, and generates detailed investigation reports for compliance teams.",
+  "industry": "Banking & Finance",
+  "pattern": "Multi-Agent",
+  "complexity": "Intermediate",
+  "tags": [
+    "aml",
+    "compliance",
+    "investigation",
+    "risk",
+    "sdlc"
+  ],
+  "steps": [
+    {
+      "id": "alert-intake",
+      "name": "AML Alert Intake",
+      "description": "Collect and validate AML alerts from transaction monitoring systems; attach runId and timestamp."
+    },
+    {
+      "id": "entity-resolution",
+      "name": "Entity Resolution",
+      "description": "Resolve customer entities and identify related parties across KYC, CRM, and external data."
+    },
+    {
+      "id": "pattern-analysis",
+      "name": "Transaction Pattern Analysis",
+      "description": "Detect structuring, smurfing, and velocity anomalies; emit scored indicators."
+    },
+    {
+      "id": "risk-scoring",
+      "name": "Risk Scoring",
+      "description": "Aggregate indicator scores with profile risk; compute composite SAR likelihood."
+    },
+    {
+      "id": "investigation-planning",
+      "name": "Investigation Planning",
+      "description": "Draft action plan, assign tasks, and set SLAs with decision gates."
+    },
+    {
+      "id": "report-compilation",
+      "name": "SAR Report Compilation",
+      "description": "Assemble narrative, evidence set, and filing metadata; persist and return JSON."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "alert-intake",
+      "type": "agentbridge",
+      "data": {
+        "label": "AML Alert Intake",
+        "description": "Collect and validate AML alerts from transaction monitoring systems; attach runId and timestamp.",
+        "nodeType": "input",
+        "category": "ai-models",
+        "executionMode": "autonomous"
+      },
+      "position": {
+        "x": 0,
+        "y": 100
+      }
+    },
+    {
+      "id": "entity-resolution",
+      "type": "agentbridge",
+      "data": {
+        "label": "Entity Resolution",
+        "description": "Resolve customer entities and identify related parties across KYC, CRM, and external data.",
+        "nodeType": "llm",
+        "category": "ai-models",
+        "executionMode": "autonomous"
+      },
+      "position": {
+        "x": 300,
+        "y": 100
+      }
+    },
+    {
+      "id": "pattern-analysis",
+      "type": "agentbridge",
+      "data": {
+        "label": "Transaction Pattern Analysis",
+        "description": "Detect structuring, smurfing, and velocity anomalies; emit scored indicators.",
+        "nodeType": "llm",
+        "category": "ai-models",
+        "executionMode": "autonomous"
+      },
+      "position": {
+        "x": 600,
+        "y": 100
+      }
+    },
+    {
+      "id": "risk-scoring",
+      "type": "agentbridge",
+      "data": {
+        "label": "Risk Scoring",
+        "description": "Aggregate indicator scores with profile risk; compute composite SAR likelihood.",
+        "nodeType": "llm",
+        "category": "ai-models",
+        "executionMode": "autonomous"
+      },
+      "position": {
+        "x": 900,
+        "y": 100
+      }
+    },
+    {
+      "id": "investigation-planning",
+      "type": "agentbridge",
+      "data": {
+        "label": "Investigation Planning",
+        "description": "Draft action plan, assign tasks, and set SLAs with decision gates.",
+        "nodeType": "llm",
+        "category": "ai-models",
+        "executionMode": "autonomous"
+      },
+      "position": {
+        "x": 1200,
+        "y": 100
+      }
+    },
+    {
+      "id": "report-compilation",
+      "type": "agentbridge",
+      "data": {
+        "label": "SAR Report Compilation",
+        "description": "Assemble narrative, evidence set, and filing metadata; persist and return JSON.",
+        "nodeType": "output",
+        "category": "ai-models",
+        "executionMode": "autonomous"
+      },
+      "position": {
+        "x": 1500,
+        "y": 100
+      }
+    }
+  ],
+  "publishedAt": "2025-12-03T17:12:31.813Z",
+  "destination": "launchpad",
+  "deployments": 21,
+  "lastDeployed": "2025-12-03T17:12:31.813Z",
+  "configuration": {
+    "provider": "azure",
+    "region": "eastus",
+    "compute": "cpu-optimized"
+  },
+  "healthStatus": "healthy",
+  "deploymentCount": 11,
+  "githubRepo": "https://github.com/agentbridge/anti-money-laundering-investigation",
+  "maintainer": "You",
+  "downloads": 863,
+  "rating": 4.061671215321267,
+  "createdAt": "2025-12-03T17:12:31.813Z",
+  "updatedAt": "2025-12-03T17:12:31.813Z",
+  "isPublished": true,
+  "isFeatured": false,
+  "deploymentMetadata": {
+    "publishedBy": "You",
+    "publishedAt": "2025-12-03T17:12:31.813Z",
+    "source": "Template Selection",
+    "version": "1.0.0"
+  }
+}
